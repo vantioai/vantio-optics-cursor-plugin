@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vantio-optics": {
+      "command": "npx",
+      "args": ["-y", "@vantio/optics-mcp"]
+    }
+  }
+}

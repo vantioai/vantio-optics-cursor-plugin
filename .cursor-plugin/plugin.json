@@ -1,0 +1,15 @@
+{
+  "name": "vantio-optics",
+  "displayName": "Vantio Optics",
+  "version": "0.1.1",
+  "description": "Read-only Vantio Optics MCP — Sight Loop observe for AI agents. Proofs, hosts, upgrade path to Gate.",
+  "author": {
+    "name": "Vantio AI, Inc.",
+    "email": "hello@vantio.ai"
+  },
+  "homepage": "https://vantio.ai/platform",
+  "repository": "https://github.com/vantioai/vantio-optics-cursor-plugin",
+  "license": "MIT",
+  "keywords": ["vantio", "optics", "mcp", "governance", "observability", "ai-agents"],
+  "logo": "assets/logo.svg"
+}
