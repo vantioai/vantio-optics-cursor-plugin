@@ -50,3 +50,15 @@ Optics is a **local stdio** server (`npx @vantio/optics-mcp`) reading `~/.vantio
 It is not a fit for Smithery’s remote URL flow unless we later ship a hosted gateway.
 
 MIT · Vantio AI, Inc.
+
+
+## Related: Gate dry-run MCP
+
+```json
+{
+  "mcpServers": {
+    "vantio-optics": { "command": "npx", "args": ["-y", "@vantio/optics-mcp"] },
+    "vantio-gate": { "command": "npx", "args": ["-y", "@vantio/gate-mcp"] }
+  }
+}
+```
