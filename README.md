@@ -22,7 +22,7 @@ Read-only **Vantio Optics** MCP for Cursor and Open Plugins hosts.
 | Repository | `vantioai/vantio-optics-cursor-plugin` |
 | **Logotype URL** | `https://vantio.ai/vantio-logo.png` |
 | Alt logo | `https://raw.githubusercontent.com/vantioai/vantio-optics-cursor-plugin/main/assets/logo.png` |
-| Homepage | https://vantio.ai/platform |
+| Homepage | https://vantio.ai/optics |
 
 ### Cursor Marketplace
 https://cursor.com/marketplace/publish → this repo → Logotype URL above
