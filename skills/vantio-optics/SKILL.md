@@ -15,3 +15,13 @@ Use the `vantio-optics` MCP server (`npx -y @vantio/optics-mcp`).
 - `optics_upgrade_path` — Optics → Gate → Phantom Engine
 
 Fence: observe only. No prompts/completions retained.
+
+## Two observe paths (do not conflate)
+
+| Path | Who | Mechanism | Not claimed |
+|------|-----|-----------|-------------|
+| **Client Cursor / Open Plugin (this MCP)** | Developer IDE | `npx @vantio/optics-mcp` reads local `~/.vantio/runs` from Node `vantio run` | Gate Latch BLOCK; PE DENY |
+| **Company Python agents (shape 4a/4b)** | Phantom-Box dogfood | `scripts/optics_observe.py` (`vantio-agent-sdk`) → vantio-pro `/api/v1/ingest` with `action_taken=OBSERVED`; wrapper `scripts/run_under_optics.sh`; container via `agent-hands/entrypoint.sh` | Gate HTTP mediation of Cursor SaaS; PE path DENY (PE is stacked separately) |
+
+Optics is observe-only metadata. For block/redact/cap spend, upgrade to Vantio Gate.
+For Absolute Control / bypass proof, upgrade to Phantom Engine.
