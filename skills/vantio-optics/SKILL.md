@@ -23,5 +23,8 @@ Fence: observe only. No prompts/completions retained.
 | **Client Cursor / Open Plugin (this MCP)** | Developer IDE | `npx @vantio/optics-mcp` reads local `~/.vantio/runs` from Node `vantio run` | Gate Latch BLOCK; PE DENY |
 | **Company Python agents (shape 4a/4b)** | Phantom-Box dogfood | `scripts/optics_observe.py` (`vantio-agent-sdk`) → vantio-pro `/api/v1/ingest` with `action_taken=OBSERVED`; wrapper `scripts/run_under_optics.sh`; container via `agent-hands/entrypoint.sh` | Gate HTTP mediation of Cursor SaaS; PE path DENY (PE is stacked separately) |
 
-Optics is observe-only metadata. For block/redact/cap spend, upgrade to Vantio Gate.
-For Absolute Control / bypass proof, upgrade to Phantom Engine.
+Optics is observe-only metadata. When you need Vantio to stop a host, redact a
+payload, or enforce a spend ceiling on mediated HTTP, upgrade to Vantio Gate.
+When you need kernel-held Absolute Control (path DENY / enrolled enforcement)
+that still holds if an agent tries to go around application rules, upgrade to
+Phantom Engine.
