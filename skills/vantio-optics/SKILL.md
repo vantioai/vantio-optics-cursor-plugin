@@ -21,7 +21,7 @@ Fence: observe only. No prompts/completions retained.
 | Path | Who | Mechanism | Not claimed |
 |------|-----|-----------|-------------|
 | **Client Cursor / Open Plugin (this MCP)** | Developer IDE | `npx @vantio/optics-mcp` reads local `~/.vantio/runs` from Node `vantio run` | Gate Latch BLOCK; PE DENY |
-| **Company Python agents (shape 4a/4b)** | Phantom-Box dogfood | `scripts/optics_observe.py` (`vantio-agent-sdk`) → vantio-pro `/api/v1/ingest` with `action_taken=OBSERVED`; wrapper `scripts/run_under_optics.sh`; container via `agent-hands/entrypoint.sh`. Ingest base URL accepts a pasted full `/api/v1/ingest` path; observed hosts are normalized to hostname-only for Mission Control. | Gate HTTP mediation of Cursor SaaS; PE path DENY (PE is stacked separately) |
+| **Company Python agents (shape 4a/4b)** | Phantom-Box dogfood | `scripts/optics_observe.py` (`vantio-agent-sdk`) → vantio-pro `/api/v1/ingest` with `action_taken=OBSERVED`; wrapper `scripts/run_under_optics.sh`; container via `agent-hands/entrypoint.sh`. Ingest base URL accepts a pasted full `/api/v1/ingest` path; observed hosts are normalized to hostname-only for Mission Control. Each emit's `trace_id` is what Mission Control indexes (snake-case body + header); long-lived hands keep a separate session id so one container does not mash every call into one search key. | Gate HTTP mediation of Cursor SaaS; PE path DENY (PE is stacked separately) |
 
 Optics is observe-only metadata. When you need Vantio to stop a host, redact a
 payload, or enforce a spend ceiling on mediated HTTP, upgrade to Vantio Gate.
