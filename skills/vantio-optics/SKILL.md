@@ -7,6 +7,8 @@ description: Observe AI agent LLM egress with Vantio Optics MCP (Sight Loop). Re
 
 Use the `vantio-optics` MCP server (`npx -y @vantio/optics-mcp`).
 
+Optics helps you see. Gate applies the rules you set. Phantom Engine protects the machines you own.
+
 ## Tools
 - `optics_list_runs` / `optics_get_run` — local run metadata
 - `optics_prove` — Markdown Sight Loop proof
@@ -14,17 +16,10 @@ Use the `vantio-optics` MCP server (`npx -y @vantio/optics-mcp`).
 - `optics_explain` — privacy fence
 - `optics_upgrade_path` — Optics → Gate → Phantom Engine
 
-Fence: observe only. No prompts/completions retained.
+Fence: observe only. No prompts or completions retained.
 
-## Two observe paths (do not conflate)
+## What this MCP covers
 
-| Path | Who | Mechanism | Not claimed |
-|------|-----|-----------|-------------|
-| **Client Cursor / Open Plugin (this MCP)** | Developer IDE | `npx @vantio/optics-mcp` reads local `~/.vantio/runs` from Node `vantio run` | Gate Latch BLOCK; PE DENY |
-| **Company Python agents (shape 4a/4b)** | Phantom-Box dogfood | `scripts/optics_observe.py` (`vantio-agent-sdk`) → vantio-pro `/api/v1/ingest` with `action_taken=OBSERVED`; wrapper `scripts/run_under_optics.sh`; container via `agent-hands/entrypoint.sh` | Gate HTTP mediation of Cursor SaaS; PE path DENY (PE is stacked separately) |
+This plugin reads local `~/.vantio/runs` from Node `vantio run` (`@vantio/cli` 0.3.2 wraps fetch and Node http/https) or from Python `shield()` (`vantio-agent-sdk` 3.0.2 wraps urllib, and requests/httpx when those libraries are already installed). It does not enforce policy and it does not see curl, raw sockets, or browser paths.
 
-Optics is observe-only metadata. When you need Vantio to stop a host, redact a
-payload, or enforce a spend ceiling on mediated HTTP, upgrade to Vantio Gate.
-When you need kernel-held Absolute Control (path DENY / enrolled enforcement)
-that still holds if an agent tries to go around application rules, upgrade to
-Phantom Engine.
+Optics is observe-only metadata. When you need Vantio to stop a host, redact a payload, or enforce a spend ceiling on the wrapped path, upgrade to Vantio Gate. When you need protection on Linux machines you own that still holds if an agent tries to go around application rules, upgrade to Phantom Engine.
