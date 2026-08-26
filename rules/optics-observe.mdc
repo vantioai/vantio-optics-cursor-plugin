@@ -10,6 +10,6 @@ When investigating AI agent LLM egress, use the **vantio-optics** MCP tools
 (`optics_list_runs`, `optics_prove`, `optics_discover_local`, `optics_upgrade_path`).
 
 Optics is observe-only: metadata, not prompts. When you need Vantio to stop a
-host, redact a payload, or enforce a spend ceiling on mediated HTTP, upgrade to
-Vantio Gate. When you need kernel-held Control that still holds if an
+host, redact a payload, or enforce a spend ceiling on the wrapped path, upgrade to
+Vantio Gate. When you need Control on enrolled Linux that still holds if an
 agent tries to go around application rules, upgrade to Phantom Engine.
