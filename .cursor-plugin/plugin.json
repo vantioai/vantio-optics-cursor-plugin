@@ -2,7 +2,7 @@
   "name": "vantio-optics",
   "displayName": "Vantio Optics",
   "version": "0.1.1",
-  "description": "Read-only Vantio Optics MCP \u2014 Sight Loop observe for AI agents. Proofs, hosts, upgrade path to Gate.",
+  "description": "Read-only Vantio Optics MCP — Sight Loop observe for AI agents. Proofs, hosts, upgrade path to Phantom Engine.",
   "author": {
     "name": "Vantio AI, Inc.",
     "email": "hello@vantio.ai"

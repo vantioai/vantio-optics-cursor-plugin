@@ -2,13 +2,13 @@
 
 Read-only **Vantio Optics** MCP for Cursor and Open Plugins hosts. Optics helps you see where agents go — host, size, process, time — without reading prompts or completions. It does not block, redact, or cap spend.
 
-Vantio AI (Pittsburgh, 2026): Optics helps you see. Gate applies the rules you set. Phantom Engine protects the machines you own.
+Vantio AI (Pittsburgh, 2026): Optics helps you see. Phantom Engine is runtime protection on enrolled Linux — Observe, Enforce, and Control in one purchase. Enterprise adds governance when you need proof and process on top — talk to sales.
 
 Homepage: [vantio.ai/optics](https://vantio.ai/optics) · Pricing: [vantio.ai/pricing](https://vantio.ai/pricing)
 
 ## Install (manual)
 
-Generate local run logs first (`npx @vantio/cli run node agent.js`, or Python `shield()` from `vantio-agent-sdk` 3.0.2), then add:
+Generate local run logs first (`npx @vantio/cli run node agent.js`, or Python `shield()` from `vantio-agent-sdk`), then add:
 
 ```json
 {
@@ -59,9 +59,9 @@ It is not a fit for Smithery’s remote URL flow unless we later ship a hosted g
 
 MIT · Vantio AI, Inc.
 
-## Related: Gate dry-run MCP
+## Related: Phantom Engine dry-run MCP (legacy package name)
 
-When you want to preview whether a call would be allowed under Gate rules (evaluate only — not live enforce):
+`@vantio/gate-mcp` is a legacy compatibility package for Phantom Engine application-path enforcement dry-run. Gate is not a separate Vantio product or subscription. Evaluate only — not live enforce:
 
 ```json
 {
