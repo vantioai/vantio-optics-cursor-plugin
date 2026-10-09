@@ -1,0 +1,11 @@
+# Public plugin install pin.
+# A pull request touching any of these needs the founder-approved label,
+# applied by a repository admin after the latest push.
+README.md
+.mcp.json
+mcp.json
+# The guard protects itself.
+.github/founder-approval-paths.txt
+.github/workflows/founder-approval-guard.yml
+.github/workflows/ci.yml
+scripts/ci/founder_approval_guard.py
