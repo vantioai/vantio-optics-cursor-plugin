@@ -9,3 +9,4 @@ mcp.json
 .github/workflows/founder-approval-guard.yml
 .github/workflows/ci.yml
 scripts/ci/founder_approval_guard.py
+scripts/ci/test_founder_approval_guard.py
