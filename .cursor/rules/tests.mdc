@@ -1,0 +1,11 @@
+---
+description: Run existing tests first; add tests for every behavioral change including negative cases
+alwaysApply: true
+---
+
+# Tests
+
+- Before proposing changes, run `python3 scripts/ci/test_founder_approval_guard.py -v` from the repo root.
+- There is **no** npm test script in this repository; do not invent one.
+- Any change to `scripts/ci/founder_approval_guard.py` or guard behavior **must** include updates to `scripts/ci/test_founder_approval_guard.py` with **positive and negative** cases.
+- Record test command, exit code, and commit SHA in the relevant `evidence/*.md` file.

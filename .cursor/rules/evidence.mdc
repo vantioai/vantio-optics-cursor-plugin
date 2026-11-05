@@ -1,0 +1,11 @@
+---
+description: Record verification in evidence/<name>.md with commands, exit codes, SHAs, and human-only gaps
+alwaysApply: true
+---
+
+# Evidence
+
+- For cloud-agent setup or verification work, add or update `evidence/<name>.md`.
+- Include: date (UTC), agent run link if available, **exact commands**, **exit codes**, and **git SHAs** exercised.
+- End with a **gap list**: outcomes only a human can prove (founder label, marketplace listing, live MCP against a developer machine, billing).
+- Do not paste secrets, tokens, or customer data into evidence files.

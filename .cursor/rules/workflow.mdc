@@ -1,0 +1,12 @@
+---
+description: Cloud agent workflow — one scope, small diff, draft PR only, never merge or push to main
+alwaysApply: true
+---
+
+# Workflow
+
+- Take **one scoped task** per agent run; refuse unrelated drive-by edits.
+- Prefer **minimal diffs**; docs and config only unless owners assign product work elsewhere.
+- Open **one draft pull request** per branch; **never** mark it ready for review, **never** merge, **never** push to `main`.
+- No release tags, marketplace publishes, deploys, workflow dispatches, or ad hoc cloud production runs from the agent.
+- If a change touches `.github/founder-approval-paths.txt` protected paths, stop and note that a repo admin must apply `founder-approved` after the latest push.

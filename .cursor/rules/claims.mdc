@@ -1,0 +1,11 @@
+---
+description: Observe-only Optics plugin — prove claims with tests/logs; no enforcement language; escalate policy to owners
+alwaysApply: true
+---
+
+# Claims
+
+- This plugin wires **read-only** Optics MCP (`@vantio/optics-mcp`); it **observes** local run metadata and does **not** enforce policy or replace Phantom Engine.
+- State only what **unit tests or command output from the current run** support; avoid speculative or marketing guarantees in agent-authored docs.
+- Do not write that Optics or this repo "blocks," "denies," or "enforces" agent behavior — that would misrepresent observe-only scope.
+- When documentation touches governance, pricing, or founder-guard policy, add **open questions for repository owners** in `AGENTS.md` or the PR body instead of deciding alone.
