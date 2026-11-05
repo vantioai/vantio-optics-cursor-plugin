@@ -1,0 +1,11 @@
+---
+description: No secrets or customer data; no live payments; no tags, publishes, deploys, or cloud runs
+alwaysApply: true
+---
+
+# Safety
+
+- Never commit or paste API keys, tokens, passwords, or customer-identifying data in code, logs, commits, or PR descriptions.
+- No live payment flows or production account actions from the agent environment.
+- No git tags, npm publishes, marketplace submits, deploys, or workflow dispatches unless a human owner explicitly requests it outside the agent guardrails.
+- Treat this repository as **public**; exclude internal business details beyond what is already in public README/marketing copy.
