@@ -11,4 +11,4 @@ When investigating AI agent LLM egress, use the **vantio-optics** MCP tools
 
 Optics is observe-only: metadata, not prompts. When you need Observe, Enforce, and
 Control together on enrolled Linux, upgrade to Phantom Engine. When you need
-governance and evidence at scale, talk to sales about Vantio Enterprise.
+governance and evidence at scale, contact Vantio about Vantio Enterprise.
